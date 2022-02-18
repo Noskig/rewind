@@ -57,17 +57,50 @@
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                        //Call Hello World
-                        function HelloWorld(){
-                            alert("Hello World");
+                        //Get the string from page
+                        //Controller function
+                        function getValues(){
+
+                            document.getElementById("alert").classList.add("invisible");
+                        
+                            let userString = document.getElementById("userString").value;
+                            let revString = reverseString(userString);
+                        
+                            displayString(revString);
+                        }
+                        //Reverse it
+                        //logic function
+                        function reverseString(userString){
+                            
+                            let revString = [];
+                        
+                            for (let index = userString.length -1 ; index >= 0; index--) {
+                        
+                                revString += userString[index];
+                            }
+                            return revString;
+                        }
+                        //Display the reversed string
+                        //view function
+                        function displayString(revString){
+                        
+                            //write to page
+                            document.getElementById("msg").innerHTML = `Your string reversed is: ${revString}`;
+                            //turn on alert box
+                            document.getElementById("alert").classList.remove("invisible");
                         }
                     </code>
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The code is structed in one function</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with an message</p>
+                    <h3>The code is structed in three functions</h3>
+                    <br>
+                    <h5 class="codeFunc">getValues</h5>
+                    <p>Gets the string from the user and calls the other methods</p>
+                    <h5 class="codeFunc">reverseString</h5>
+                    <p>Reverses the string</p>
+                    <h5 class="codeFunc">displayString</h5>
+                    <p>Displays the string on the page</p>
                 </div>
             </div>
 

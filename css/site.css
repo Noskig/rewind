@@ -4,6 +4,11 @@
     --secondary-color: #393b8f;
     --dark-color: #292929;
     --white-color:#dfeaf3;
+    --yellow-color: #bdbd4a;
+}
+
+.codeFunc{
+    color: var(--yellow-color);
 }
 
 body{
