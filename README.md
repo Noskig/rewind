@@ -1,2 +1,2 @@
-# MiniSite-Template
- Site Template for JS Projects
+# Javascript Rewind
+ exercise in strings
